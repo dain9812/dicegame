@@ -1,13 +1,10 @@
-import blueDice from "../assets/dice-blue-1.svg";
-import redDice from "../assets/dice-red-1.svg";
+import Dice from "./Dice";
 
-export default function Board({ name, color }) {
-  const dice = color === "blue" ? blueDice : redDice;
-
+export default function Board({ name, color, num }) {
   return (
     <div class="Board App-board">
       <h2 class="Board-heading">{name}</h2>
-      <img class="Dice" src={dice} alt={dice} />
+      <Dice color={color} num={num} />
       <h2 class="Board-heading">기록</h2>
       <p></p>
       <h2 class="Board-heading">총점</h2>
